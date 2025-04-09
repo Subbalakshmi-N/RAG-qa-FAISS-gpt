@@ -1,4 +1,4 @@
-# Document-QA-System
+# RAG-qa-FAISS-gpt
 
 This project implements a Document Question-Answering (QA) System. It allows users to input a question and retrieve relevant answers from a Word document using a combination of Natural Language Processing (NLP) techniques, sentence embeddings, and a vector search index (FAISS). The system processes the document, divides it into chunks, and uses the FAISS index to retrieve the most relevant chunks based on the input question. The system then uses GPT-3.5 Turbo to generate a coherent and contextually accurate response.
 
@@ -22,13 +22,9 @@ This project implements a Document Question-Answering (QA) System. It allows use
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/Document-QA-System.git
-   cd Document-QA-System
-
 2. Install the required dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. Make sure you have an OpenAI API key set up.
 
