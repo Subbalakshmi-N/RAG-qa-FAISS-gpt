@@ -22,9 +22,7 @@ This project implements a Document Question-Answering (QA) System. It allows use
 
 1. Clone the repository:
 
-2. Install the required dependencies:
-
-   pip install -r requirements.txt
+2. Install the required dependencies
 
 3. Make sure you have an OpenAI API key set up.
 
