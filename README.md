@@ -1,52 +1,60 @@
-Project Name: Document-based Question Answering System
+# Document-QA-System
 
-Description:
-A Python-based system that answers questions from a Word document (.docx) using:
+This project implements a Document Question-Answering (QA) System. It allows users to input a question and retrieve relevant answers from a Word document using a combination of Natural Language Processing (NLP) techniques, sentence embeddings, and a vector search index (FAISS). The system processes the document, divides it into chunks, and uses the FAISS index to retrieve the most relevant chunks based on the input question. The system then uses GPT-3.5 Turbo to generate a coherent and contextually accurate response.
 
-FAISS for efficient similarity search
+## Features
 
-Sentence Transformers for text embeddings
+- **Text Preprocessing**: The document is preprocessed to remove stopwords, punctuation, and perform stemming/lemmatization.
+- **Document Chunking**: Large documents are split into smaller chunks to enable efficient processing and search.
+- **FAISS Integration**: The system uses the FAISS library to build an index of document embeddings, enabling fast and scalable nearest neighbor search.
+- **GPT-3.5 Turbo Integration**: After retrieving the top relevant chunks from the document, GPT-3.5 Turbo generates an answer based on the context provided.
 
-OpenAI GPT-3.5 Turbo for answer generation
+## Prerequisites
 
-NLTK for text preprocessing (tokenization, stemming, lemmatization)
+- Python 3.6+
+- OpenAI API Key
+- FAISS library
+- NLTK library
+- Sentence-Transformers library
+- Python-docx library
 
-Key Features:
+## Installation
 
-Loads and preprocesses .docx files.
+1. Clone the repository:
 
-Splits text into chunks for efficient retrieval.
+   ```bash
+   git clone https://github.com/your-username/Document-QA-System.git
+   cd Document-QA-System
 
-Uses FAISS to find the most relevant text passages for a given question.
+2. Install the required dependencies:
 
-Generates accurate answers using GPT-3.5 Turbo with retrieved context.
+pip install -r requirements.txt
 
-Use Cases:
+3. Make sure you have an OpenAI API key set up.
 
-Quickly extract answers from long documents.
+## Usage
+1. Prepare a Word document (e.g., .docx) and place it in the same directory as the script.
 
-Build a knowledge base assistant.
+2. Run the script:
+  python model-distillation.py
 
-Educational or research tool for document analysis.
+3. Ask questions, and the system will provide relevant answers based on the document's content.
 
-Dependencies:
+4. To exit the system, simply type 'exit'.
 
-openai, python-docx, sentence-transformers, faiss-cpu, nltk
+## Acknowledgements
+OpenAI's GPT-3.5 Turbo for natural language processing.
 
-How to Run:
+Sentence-Transformers for embedding-based document search.
 
-Install dependencies:
+FAISS for efficient similarity search.
 
-bash
-Copy
-pip install openai python-docx sentence-transformers faiss-cpu nltk  
-Add your OpenAI API key and Word document path.
+NLTK for text preprocessing tasks.
 
-Run python main.py and ask questions interactively.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Example Workflow:
+This summary provides a clear overview of the project's functionality, setup instructions, and usage examples, making it easier for anyone to understand and use the system.
 
-plaintext
-Copy
-Ask a question (or type 'exit' to quit): What is the main topic of the document?  
-Answer: The document discusses... [generated answer]  
+
+
